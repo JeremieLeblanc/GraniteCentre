@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Granite Centre will host experiential retailers that leverage the in-store experience in ways that inspire attachment, while seamlessly driving online engagement." />
+    <partial name="_Favicons" />
+    <title>@ViewData["Title"] - Granite Centre</title>
+
+    <environment include="Development">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="~/lib/bootstrap/scss/bootstrap.min.css" />
+        <script src="~/lib/FontAwesome5/fontawesome-all.js"></script>
+        <link rel="stylesheet" href="~/lib/MDB/scss/mdb.min.css" />
+        <link rel="stylesheet" href="~/css/site.min.css" />
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </environment>
+    <environment exclude="Development">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="~/lib/bootstrap/scss/bootstrap.min.css" />
+        <script src="~/lib/FontAwesome5/fontawesome-all.js"></script>
+        <link rel="stylesheet" href="~/lib/MDB/scss/mdb.min.css" />
+        <link rel="stylesheet" href="~/css/site.min.css" />
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="" href="/" aria-label="Logo">
+                <div class="logoContainer bigLogo">
+
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="mr-auto"></ul>
+                <ul class="navbar-nav mt-2 mt-lg-0" id="mainNav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Gallery", "En")">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Leasing", "En")">Leasing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Greater-Moncton", "En")">Greater Moncton</a>
+                            <a class="dropdown-item" href="@Url.Action("Site", "En")">Granite Centre</a>
+                            @*<a class="dropdown-item" href="@Url.Action("Retailer-Focus", "En")">Retailer Focus</a>
+                            <a class="dropdown-item" href="@Url.Action("Right-Fit-Analysis", "En")">Right Fit Analysis</a>*@
+                            <a class="dropdown-item" href="@Url.Action("News", "En")">News</a>
+                        </div>
+                    </li>
+                    @*<li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Greater-Moncton", "En")">Greater Moncton</a>
+                        </li>*@
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Contact", "En")">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-primary" target="_blank" href="~/PDF/Granite_Centre_Flyer.pdf">Download PDF</a>
+                    </li>
+                </ul>
+                @*<ul class="navbar-nav my-0 mt-2 mt-lg-0 languageSelector">
+                        <li>
+                            <div class="btn-group-vertical">
+                                <a href="#" class="btn btn-outline-light active">En</a>
+                                <button class="btn btn-outline-light" data-toggle="tooltip" data-placement="left" title="À venir">Fr</button>
+                            </div>
+                        </li>
+                    </ul>*@
+            </div>
+
+        </div>
+    </nav>
+    @RenderSection("Carousel", required: false)
+    <div class="body-content">
+        @RenderBody()
+        <div class="container">
+            <hr />
+            <footer>
+                <p>Copyright &copy; @(DateTime.Now.Year.ToString()) - Granite Centre Moncton</p>
+            </footer>
+        </div>
+
+    </div>
+
+    <template id="templateAlert">
+        <div class="alert alert-dismissible fade show" role="alert">
+            <span class="alert-content"></span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </template>
+
+    <environment include="Development">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous"></script>
+        <script src="~/lib/popper.js/dist/umd/popper.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/MDB/js/mdb.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous"></script>
+        <script src="~/lib/popper.js/dist/umd/popper.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/MDB/js/mdb.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false);
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139369785-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139369785-1');
+    </script>
+
+</body>
+</html>

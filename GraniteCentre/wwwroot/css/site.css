@@ -1,0 +1,328 @@
+﻿@font-face {
+  font-family: 'schluberregular';
+  src: url("../fonts/schluber-webfont.woff2") format("woff2"), url("../fonts/schluber-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.pswp__top-bar .pswp__button, .pswp__button--arrow--left:before, .pswp__button--arrow--right:before {
+  background-image: url(../lib/MDB/img/lightbox/default-skin.png); }
+
+/*General Styles Start*/
+html, body {
+  height: 100%; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 66px; }
+
+.invalid-feedback {
+  display: block !important;
+  width: 100%; }
+
+.schluber {
+  font-family: 'schluberregular', sans-serif; }
+
+b {
+  font-weight: 900; }
+
+.transition {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s; }
+
+.bg-light-blue {
+  background-color: #d5dde3; }
+
+.bg-dark {
+  background: #1c252c;
+  background: -moz-linear-gradient(left, #192229 0%, #283039 70%, #232c34 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #192229), color-stop(70%, #283039), color-stop(100%, #232c34));
+  background: -webkit-linear-gradient(left, #192229 0%, #283039 70%, #232c34 100%);
+  background: -o-linear-gradient(left, #192229 0%, #283039 70%, #232c34 100%);
+  background: -ms-linear-gradient(left, #192229 0%, #283039 70%, #232c34 100%);
+  background: linear-gradient(to right, #192229 0%, #283039 70%, #232c34 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#192229', endColorstr='#232c34', GradientType=1 ); }
+
+.dark-orange {
+  color: #913116; }
+
+.btn-outline-light:active, .btn-outline-light:hover {
+  color: #1c252c !important; }
+
+.loading {
+  position: relative; }
+  .loading:before {
+    z-index: 999;
+    content: "";
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  .loading .loading-spinner {
+    display: block; }
+
+.loading-spinner {
+  z-index: 1000;
+  display: none;
+  color: #fff;
+  position: absolute;
+  width: 50px !important;
+  height: 50px !important;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px; }
+
+.right-fit-form .loading-spinner {
+  top: 95%;
+  bottom: 5%; }
+
+@media (min-width: 992px) {
+  body {
+    margin-top: 96px; } }
+
+/*General Styles End*/
+/*Navbar Styles Start*/
+.logoContainer {
+  background-image: url(../images/Logo-Horizontal.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 132px;
+  height: 50px; }
+
+.languageSelector {
+  float: right; }
+  .languageSelector .btn {
+    font-size: 0.75rem;
+    border: none; }
+
+@media (min-width: 992px) {
+  .navbar {
+    min-height: 96px; }
+    .navbar .logoContainer {
+      background-image: url(../images/Logo.svg);
+      position: absolute;
+      top: 15px; }
+      .navbar .logoContainer.bigLogo {
+        width: 204px;
+        height: 226px; }
+      .navbar .logoContainer.smallLogo {
+        width: 114px;
+        height: 66px; }
+    .navbar .nav-item {
+      padding-right: 1rem;
+      padding-left: 1rem; } }
+
+/*Navbar Styles Start*/
+/*Carousel Styles Start*/
+.carousel .carousel-control-next-icon {
+  background-image: url("../images/GC-Arrow-Right.svg"); }
+
+.carousel .carousel-control-prev-icon {
+  background-image: url("../images/GC-Arrow-Left.svg"); }
+
+.carousel .carousel-indicators li {
+  cursor: pointer; }
+
+/*Carousel Styles End*/
+/*Card Styles Start*/
+.card-section {
+  padding-top: 4em;
+  padding-bottom: 4em; }
+  .card-section .card {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em; }
+
+/*Card Styles End*/
+.diff-approach {
+  background-image: url("../images/Why-Take-A-Different-Approach-Mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 250px; }
+
+@media (min-width: 992px) {
+  .diff-approach {
+    background-image: url("../images/Why-Take-A-Different-Approach.jpg");
+    background-size: auto;
+    min-height: 450px; } }
+
+.building-leasing-inquiries .flex-row {
+  margin-top: 1em; }
+
+.building-leasing-inquiries .gc-arrow {
+  opacity: 0.3;
+  height: 200px;
+  width: 200px; }
+
+.building-leasing-inquiries h1 {
+  font-weight: normal; }
+
+@media (max-width: 575.98px) {
+  .building-leasing-inquiries h1 {
+    font-size: 1.6rem; } }
+
+.building-leasing-inquiries .heidi-contact-card {
+  max-width: 620px; }
+  .building-leasing-inquiries .heidi-contact-card .heidi-img {
+    max-height: 175px; }
+  .building-leasing-inquiries .heidi-contact-card .colliers-img {
+    height: 53px;
+    float: right; }
+
+@media (max-width: 575.98px) {
+  .contact-form .contact-form-btn {
+    display: block;
+    width: 100%; } }
+
+.contact-form-logo {
+  width: 100%;
+  max-height: 350px; }
+
+.Overlay-Small {
+  background-image: url("../images/Overlay-Small.png");
+  background-position: center;
+  background-size: cover;
+  height: 200px; }
+  .Overlay-Small h1 {
+    padding-top: 50px;
+    font-weight: 300; }
+
+@media (min-width: 992px) {
+  .Overlay-Small {
+    height: 413px; }
+    .Overlay-Small h1 {
+      padding-top: 250px; } }
+
+.Retailer-Focus-Banner {
+  background-image: url("../images/Retailer-Focus-Banner.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.Greater-Moncton-Banner {
+  background-image: url("../images/Greater-Moncton-Banner.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.Contact-Banner {
+  background-image: url("../images/Contact-Banner.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.Leasing-Banner {
+  background-image: url("../images/Leasing-Banner.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.Site-Banner {
+  background-image: url("../images/Lay-of-the-Land-Banner.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.Right-Fit-Analysis-Banner {
+  background-image: url("../images/Right-Fit-Analysis-Banner.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.News-Banner {
+  background-image: url("../images/News-Banner.jpg");
+  background-position: center;
+  background-size: cover; }
+  @media (min-width: 992px) {
+    .News-Banner h1 {
+      display: inline-block;
+      position: relative;
+      line-height: 200px;
+      font-size: 5em;
+      padding-top: 150px; }
+      .News-Banner h1:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -200px;
+        height: 200px;
+        width: 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/GC-Arrow-Right.svg");
+        background-size: contain;
+        opacity: 0.5; } }
+
+.News-Page .media img {
+  width: 250px;
+  max-width: 100%; }
+
+@media (max-width: 767.98px) {
+  .News-Page .media {
+    display: block; } }
+
+.carousel-item:not(.carousel-video):after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/Overlay-Large.png");
+  background-size: contain; }
+
+.retailer-focus-content {
+  max-width: 875px; }
+  .retailer-focus-content h3 {
+    font-weight: 400; }
+
+@media (min-width: 768px) {
+  .the-right-fit .the-right-fit-img {
+    padding-top: 24px; } }
+
+@media (min-width: 992px) {
+  .the-right-fit {
+    margin-bottom: 200px; }
+    .the-right-fit .the-right-fit-img {
+      position: absolute; } }
+
+.the-right-fit .the-right-fit-img {
+  max-width: 90%; }
+
+.navbar-nav {
+  display: inline-flex; }
+
+.number-box {
+  width: 60px;
+  height: 60px;
+  font-family: 'schluberregular', sans-serif;
+  font-size: 3em;
+  line-height: normal;
+  padding-top: 10px; }
+
+.right-fit-analysis-content form .orange-label .number-box {
+  background-color: #c35131;
+  color: #86341d; }
+
+.right-fit-analysis-content form .orange-label label {
+  color: #c35131; }
+
+.right-fit-analysis-content form .dark-label .number-box {
+  background-color: #303e48;
+  color: #5a6771; }
+
+.right-fit-analysis-content form .dark-label label {
+  color: #303e48; }
+
+.right-fit-analysis-content form .light-label .number-box {
+  background-color: #79828b;
+  color: #5a6771; }
+
+.right-fit-analysis-content form .light-label label {
+  color: #79828b; }
+
+.right-fit-analysis-content form label {
+  font-size: 2rem;
+  line-height: 1.9rem;
+  margin: 0; }
+
+.right-fit-analysis-content form textarea.form-control {
+  height: 150px; }

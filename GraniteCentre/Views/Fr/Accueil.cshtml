@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutFr.cshtml";
+}
+
+@section Carousel {
+    <partial name="_CarouselPartial"/>
+}
+
+<div class="container">
+    <div class="row card-section">
+        <div class="col-sm">
+            <div class="card bg-dark text-white">
+                <a href="@Url.Action("Greater-Moncton")">
+                    <img class="card-img" src="~/images/Home-Box-1.jpg" alt="Card image">
+                    <div class="card-img-overlay d-flex">
+                        @*<h1 class="card-title text-center text-uppercase align-self-center">On the <b>TCH</b> in the <b>hub</b> city</h1>*@
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card bg-dark text-white">
+                <a href="@Url.Action("Site")">
+                    <img class="card-img" src="~/images/Home-Box-2.jpg" alt="Card image">
+                    <div class="card-img-overlay d-flex">
+                        @*<h1 class="card-title text-center text-uppercase align-self-center">Card title</h1>*@
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card bg-dark text-white">
+                <a href="@Url.Action("Right-Fit-Analysis")">
+                    <img class="card-img" src="~/images/Home-Box-3.jpg" alt="Card image">
+                    <div class="card-img-overlay d-flex">
+                        @*<h1 class="card-title text-center text-uppercase align-self-center">Card title</h1>*@
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-primary">
+    <div class=" diff-approach text-white py-3">
+        <div class="container">
+            @*<div class="row">*@
+            @*<div class="col-lg-5 stwtt-left">
+                </div>*@
+            <div class="row">
+                <div class="col-lg-5 offset-lg-4 offset-xl-5">
+                    <p>
+                        For starters - we're tired of snarling traffic, sardine-sized parking spaces and cranky shopping carts. But ultimately, we believe customers are happiest when retailers simplify life, and make shopping fun.
+                    </p>
+                    <p>
+                        Interested in being our next Granite Centre Retail Partner? Click here to take <a class="text-white" href="#">THE RIGHT FIT ANALYSIS</a>, and we’ll schedule a call.
+                    </p>
+                    @*<a class="btn btn-outline-light float-right">Leasing Application</a>*@
+                </div>
+            </div>
+
+        </div>
+        @*</div>*@
+    </div>
+</div>
+
+@*<div class="bg-dark text-white text-center">
+        <div class="container py-5">
+            <img class="mx-auto d-block" src="~/images/Alvin-Profile.png" />
+            <h3>the developer who<br />thinks like a retailer</h3>
+            <h5 class="text-primary">(Because he is one.)</h5>
+            <a class="btn btn-outline-light">Meet Alvin</a>
+        </div>
+    </div>*@
+
+<partial name="_ContactPartialFr"/>

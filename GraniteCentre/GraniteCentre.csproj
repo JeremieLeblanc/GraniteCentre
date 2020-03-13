@@ -1,0 +1,174 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Fr\**" />
+    <Compile Remove="wwwroot\video\**" />
+    <Content Remove="Views\Fr\**" />
+    <Content Remove="wwwroot\video\**" />
+    <EmbeddedResource Remove="Views\Fr\**" />
+    <EmbeddedResource Remove="wwwroot\video\**" />
+    <None Remove="Views\Fr\**" />
+    <None Remove="wwwroot\video\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\FrController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\site.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.3.24.4" />
+    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.3.6.12" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.2" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Amazon.ElasticBeanstalk.Tools" Version="1.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\MDB\font\roboto\Roboto-Bold.woff2" />
+    <None Include="wwwroot\lib\MDB\font\roboto\Roboto-Light.woff2" />
+    <None Include="wwwroot\lib\MDB\font\roboto\Roboto-Medium.woff2" />
+    <None Include="wwwroot\lib\MDB\font\roboto\Roboto-Regular.woff2" />
+    <None Include="wwwroot\lib\MDB\font\roboto\Roboto-Thin.woff2" />
+    <None Include="wwwroot\lib\MDB\img\lightbox\default-skin.svg" />
+    <None Include="wwwroot\lib\MDB\img\svg\arrow_left.svg" />
+    <None Include="wwwroot\lib\MDB\img\svg\arrow_right.svg" />
+    <None Include="wwwroot\lib\MDB\js\addons\datatables.js" />
+    <None Include="wwwroot\lib\MDB\js\addons\datatables.min.js" />
+    <None Include="wwwroot\lib\MDB\js\bootstrap.js" />
+    <None Include="wwwroot\lib\MDB\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\MDB\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\lib\MDB\js\mdb.js" />
+    <None Include="wwwroot\lib\MDB\js\mdb.min.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\buttons.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\cards.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\character-counter.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\chart.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\chips.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\collapsible.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\dropdown.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\enhanced-modals.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\file-input.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\forms-free.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\hammer.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\jarallax-video.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\jarallax.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\jquery.easing.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\jquery.easypiechart.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\jquery.hammer.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\jquery.sticky.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\lightbox.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\material-select.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\mdb-autocomplete.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\picker-date.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\picker-time.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\picker.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\preloading.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\range-input.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\scrollbar.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\scrolling-navbar.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\sidenav.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\smooth-scroll.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\toastr.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\velocity.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\waves.js" />
+    <None Include="wwwroot\lib\MDB\js\modules\wow.js" />
+    <None Include="wwwroot\lib\MDB\js\popper.min.js" />
+    <None Include="wwwroot\lib\MDB\License.pdf" />
+    <None Include="wwwroot\lib\MDB\scss\addons\_datatables.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\bootstrap\_functions.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\bootstrap\_variables.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\_colors.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\_global.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\_helpers.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\_masks.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\_mixins.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\_typography.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\_variables.scss" />
+    <None Include="wwwroot\lib\MDB\scss\core\_waves.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_animations-basic.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_animations-extended.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_badges.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_buttons.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_cards.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_carousels.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_depreciated.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_dropdowns.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_footers.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_forms.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_input-group.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_list-group.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_modals.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_msc.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_navbars.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_pagination.scss" />
+    <None Include="wwwroot\lib\MDB\scss\free\_tables.scss" />
+    <None Include="wwwroot\lib\MDB\scss\mdb.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\picker\_default-date.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\picker\_default-time.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\picker\_default.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_blog.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_contacts.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_magazine.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_pricing.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_projects.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_social.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_team.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_templates.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\sections\_testimonials.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_accordion.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_animations.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_autocomplete.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_blog.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_buttons.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_cards.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_carousels.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_charts.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_checkbox.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_chips.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_depreciated.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_dropdowns.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_ecommerce.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_file-input.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_forms.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_input-group.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_lightbox.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_material-select.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_msc.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_navbars.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_parallax.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_progress.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_radio.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_range.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_scrollbar.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_scrollspy.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_sidenav.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_skins.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_social-buttons.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_steppers.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_switch.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_tabs.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_toasts.scss" />
+    <None Include="wwwroot\lib\MDB\scss\pro\_variables.scss" />
+    <None Include="wwwroot\lib\MDB\scss\_custom-skin.scss" />
+    <None Include="wwwroot\lib\MDB\scss\_custom-styles.scss" />
+    <None Include="wwwroot\lib\MDB\scss\_custom-variables.scss" />
+  </ItemGroup>
+</Project>
+

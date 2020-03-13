@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewData["Title"] = "Gallery";
+
+    string[,] gallery = new string[,] {
+        {"1-16-2020/starbucks (2).jpg", "Heidi Daigle at Grand opening"},
+        {"1-16-2020/starbucks (3).jpg", "Colliers team at Grand opening"},
+        {"1-16-2020/starbucks (1).jpg", "Starbucks Employees"},
+        {"Aug-4-2019 (4).jpg", "Costco"},
+        {"1-16-2020/granite (2).jpeg", "On-Site signage"},
+        {"1-16-2020/granite (3).jpeg", "Plaza 2"},
+        //{"1-16-2020/granite (4).jpeg", "January 16, 2020"},
+        {"1-16-2020/granite (5).jpeg", "Plaza 1"},
+        {"1-16-2020/granite (6).jpeg", "Starbucks Drive thru"},
+        //{"1-16-2020/granite (7).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (8).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (9).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (10).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (11).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (12).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (13).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (14).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (15).jpeg", "January 16, 2020"},
+        //{"1-16-2020/granite (16).jpeg", "January 16, 2020"},
+        //{"Aug-4-2019 (1).jpg", ""},
+        //{"Aug-4-2019 (2).jpg", ""},
+        //{"Aug-4-2019 (3).jpg", ""},
+        //{"Aug-4-2019 (5).jpg", ""},
+        //{"Aug-4-2019 (6).jpg", ""},
+        //{"Aug-4-2019 (7).jpg", ""},
+        //{"RCS (1).jpg", ""},
+        //{"RCS (2).jpg", ""},
+        //{"RCS (3).jpg", ""},
+        //{"RCS (4).jpg", ""},
+        {"IMG_0862.JPG","Costco Gas bar"},
+        {"IMG_0812.JPG","Costco"},
+        {"IMG_0877.JPG","Now open sign"},
+        //{"57785DC7-A51A-43C0-A202-14F26179EC2B_1024x768-1024x768.JPG",""},
+        //{"FE667D9C-9702-4377-A1ED-A93320FE8DE5_1024x768-1024x768.JPG",""},
+        //{"1495A913-6BA6-469E-82C1-2749D76B1E12_1024x768-1024x768.JPG",""},
+        //{"90E1326F-CEEF-4D77-81A9-7C384A9A9BBE-1024x768.JPG",""},
+        {"Road.JPG","Rendering - Road View"},
+        {"Site render - no cars.JPG","Rendering - Site Overview"},
+        {"Plaza 1 - Core Left.JPG","Rendering - Plaza 1"},
+        {"Plaza 1 - Core right.JPG","Rendering - Plaza 1"},
+        {"Plaza 1 - Drone.JPG","Rendering - Plaza 1"},
+        {"Plaza 1 - interior.JPG","Rendering - Plaza 1"},
+        {"Plaza 1 - Left.JPG","Rendering - Plaza 1"},
+        {"Plaza 1 - Right.JPG","Rendering - Plaza 1"},
+        {"Plaza 1 - Wide.JPG","Rendering - Plaza 1"},
+        {"Plaza 1 wide - no cars.JPG","Rendering - Plaza 1"},
+        {"Plaza 2 - Drone.JPG","Rendering - Plaza 2"},
+        {"Plaza 2 - Left.JPG","Rendering - Plaza 2"},
+        {"Plaza 2 - Right.JPG","Rendering - Plaza 2"},
+        {"Plaza 2 - Right-2.JPG","Rendering - Plaza 2"},
+        {"Plaza 3 - Drone.JPG","Rendering - Plaza 3"},
+        {"Plaza 3 - Left.JPG","Rendering - Plaza 3"},
+        {"Plaza 3 - Restaurant.JPG","Rendering - Plaza 3"},
+        {"Plaza 3 - Right.JPG","Rendering - Plaza 3"},
+        {"Plaza 3 - Wide.JPG","Rendering - Plaza 3"},
+        {"Plaza 4 - close up.JPG","Rendering - Plaza 4"},
+        {"Plaza 4 - Core.JPG","Rendering - Plaza 4"},
+        {"Plaza 4 - Drone.JPG","Rendering - Plaza 4"},
+        {"Plaza 4 - Left.JPG","Rendering - Plaza 4"},
+        {"Plaza 4 - Right.JPG","Rendering - Plaza 4"},
+        {"Plaza 4 - Wide.JPG","Rendering - Plaza 4"},
+        {"Plaza 5 - Drone.JPG","Rendering - Plaza 5"},
+        {"Plaza 5 - Front.JPG","Rendering - Plaza 5"},
+        {"Plaza 5 - Left.JPG","Rendering - Plaza 5"},
+        {"Plaza 5 - Right.JPG","Rendering - Plaza 5"},
+        {"Plaza 5 - wide - no cars.JPG","Rendering - Plaza 5"},
+        {"Stand Alone - Drone.JPG","Rendering - Stand Alone"}
+    };
+}
+
+@section Carousel {
+    <div class="Site-Banner">
+        <div class="Overlay-Small text-white text-center">
+            <h1>gallery</h1>
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script>
+        // MDB Lightbox Init
+        $(function () {
+            $("#mdb-lightbox-ui").load("/lib/MDB/mdb-addons/mdb-lightbox-ui.html");
+        });
+    </script>
+}
+
+<div class="container-fluid">
+
+    <p class="mt-3">Renderings, site plans and specifications shown are subject to change.</p>
+
+    <!--First row-->
+    <div class="row">
+
+        <!--First column-->
+        <div class="col-md-12">
+
+            <div id="mdb-lightbox-ui"></div>
+
+            <!--Full width lightbox-->
+            <div class="mdb-lightbox">
+                @for (int i = 0; i < gallery.GetLength(0); i++)
+                {
+                    <figure class="col-md-4">
+                        <a href="~/images/gallery/@gallery[i, 0]" data-size="1920x1080">
+                            <img src="~/images/gallery/@gallery[i, 0]" class="img-fluid z-depth-1">
+                        </a>
+                        <figcaption>@gallery[i, 1]</figcaption>
+                        <p class="text-center pt-1">@gallery[i, 1]</p>
+                    </figure>
+                }
+
+            </div>
+            <!--/Full width lightbox-->
+
+        </div>
+        <!--/First column-->
+
+    </div>
+    <!--First row-->
+
+</div>

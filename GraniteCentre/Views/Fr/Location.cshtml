@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Leasing";
+    Layout = "~/Views/Shared/_LayoutFr.cshtml";
+}
+
+@section Carousel {
+    <div class="Leasing-Banner">
+        <div class="Overlay-Small text-white text-center">
+            <h1>leasing</h1>
+            <p>
+                Contact Heidi Daigle at Colliers International for all leasing inquiries
+            </p>
+        </div>
+    </div>
+}
+
+<div class="container text-center py-5">
+    <h3>Available space for lease</h3>
+    <p>From 2,000 - 45,000 SF Available</p>
+    <p>Contact Colliers International for more details.</p>
+    <a class="btn btn-primary" href="@Url.Action("Contact")">Contact Us</a>
+    <img src="~/images/Granite Centre Layout Lease.jpg" class="img-fluid py-5" />
+    <p class="text-left">*Layout subject to change</p>
+</div>
+
+<partial name="_ContactPartialFr"/>

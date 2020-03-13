@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Retailer Focus";
+    Layout = "~/Views/Shared/_LayoutFr.cshtml";
+}
+
+@section Carousel {
+    <div class="Retailer-Focus-Banner">
+        <div class="Overlay-Small">
+            <h1 class="text-white text-center">experience is everything</h1>
+        </div>
+    </div>
+}
+
+<div class="container text-center py-5 retailer-focus-content">
+    @*<h3>Our sole focus is to build a business community with retailer partners who successfully engineer one-of-a-kind experiences for their customers.</h3>
+        <p class="pb-5">Brands like IKEA, Costco, NIKE and Amazon - are all examples of experiential retailers that leverage the in-store experience in ways that inspire attachment, while seamlessly driving online engagement. Each may take a unique approach in how they create unexpected happiness for customers – but in terms of fundamentals, they essentially follow the same playbook.</p>*@
+
+    <div class="my-5">
+        <h3>Our sole focus is to build a retail community with business partners who successfully engineer one-of-a-kind experiences for their customers.</h3>
+
+        <p>Granite Centre will host experiential retailers that leverage the in-store experience in ways that inspire attachment, while seamlessly driving online engagement. Each may take a unique approach in how they create unexpected happiness for customers – but in terms of fundamentals, they essentially follow the same playbook.</p>
+
+        <p class="mt-4">
+            <b class="text-primary">•</b>&nbsp;&nbsp;They continuously find new ways to surprise and delight.<br />
+            <b class="text-primary">•</b>&nbsp;&nbsp;They encourage people to interact with products.<br />
+            <b class="text-primary">•</b>&nbsp;&nbsp;They are on a quest to make shopping easy.
+        </p>
+    </div>
+
+    <div class="my-5">
+        <h3>Why take a different approach?</h3>
+        <p>For starters - we’re tired of snarling traffic, sardine-sized parking spaces and cranky shopping carts. But ultimately we believe customers are happiest when retailers simplify life, and make shopping fun.</p>
+    </div>
+
+    <div class="my-5">
+        <h3>Our 7 Non-Negotiables</h3>
+        <div>
+            <p><b class="text-primary">1.&nbsp;</b>We believe customers are happiest when retailers simplify life, and make shopping fun.</p>
+            <p><b class="text-primary">2.&nbsp;</b>We believe the “in-store” experience fuels online retail.</p>
+            <p><b class="text-primary">3.&nbsp;</b>We believe building a community with ‘people who believe what you believe’, inspires attachment.</p>
+            <p><b class="text-primary">4.&nbsp;</b>We believe self-discovery and the opportunity to interact and play makes an experience memorable.</p>
+            <p><b class="text-primary">5.&nbsp;</b>We believe the creative application of data and technology accelerates personal connectedness.</p>
+            <p><b class="text-primary">6.&nbsp;</b>We believe the best experiences reflect lifestyle priorities.</p>
+            <p><b class="text-primary">7.&nbsp;</b>We believe the most relevant retailers continuously find new ways to create unexpected happiness.</p>
+        </div>
+    </div>
+</div>
+
+<div class="bg-primary the-right-fit">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-2 py-4">
+                <h1 class="text-uppercase schluber"><span class="text-white">Interested</span><span class="dark-orange"> in being our next Granite Centre Retail Partner?</span></h1>
+                <h5 class="text-white"><u><a href="@Url.Action("Right-Fit-Analysis")" class="text-white">Click here</a></u> to take <b class="text-uppercase">THE RIGHT FIT ANALYSIS</b>, we'd love to discuss it with you.</h5>
+            </div>
+            <div class="col-md-4">
+                <img class="the-right-fit-img mx-auto d-block" src="~/images/The-Right-Fit-Analisys.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<partial name="_ContactPartialFr"/>

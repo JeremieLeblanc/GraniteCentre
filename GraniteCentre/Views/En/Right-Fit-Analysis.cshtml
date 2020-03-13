@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewData["Title"] = "Right Fit Analysis";
+}
+
+@section Carousel {
+    <div class="Right-Fit-Analysis-Banner">
+        <div class="Overlay-Small text-white text-center">
+            <h1>the RIGHT FIT ANALYSIS</h1>
+            <p>
+
+            </p>
+        </div>
+    </div>
+}
+
+<div class="container my-5 right-fit-analysis-content">
+    <p class="text-center">
+        Our sole focus is to build a business community, with retailer partners who successfully engineer one-of-a-kind experiences for their customers. The 8 questions below can help determine where your organisation is on your journey to become the leading experiential retailer in your category and if your next store will be a fit for the Granite Center.
+    </p>
+
+    <div class="row">
+        <form class="my-5 right-fit-form col-12">
+            <i class="fas fa-spinner fa-spin loading-spinner"></i>
+
+            @*<div class="row my-3 orange-label">
+            <div class="col-auto">
+                <table>
+                    <tr>
+                        <td class="align-middle text-center number-box">1</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">
+                <label>How are you creating a one-of-a-kind experience for customers?</label>
+            </div>
+            <div class="col-12 my-3">
+                <textarea id="Right-Fit-Analysis-1" class="form-group"></textarea>
+            </div>
+        </div>*@
+
+            @{
+        string[] questions = new string[]
+        {
+            "How are you creating a one-of-a-kind experience for customers?",
+            "What are you doing to create the surprise and delight that inspires customer attachment?",
+            "How are you using technology to accelerate self-discovery and individuality?",
+            "How is your store experience designed to encourage socialization and play before people buy?",
+            "How does your store serve as a showcase to drive online engagement?",
+            "What are you doing to make your customers feel like they’re part of a community?",
+            "How do you enrich your customer’s experience by gathering and integrating personal data?",
+            "What processes are you using to find new systems & technologies that empower people and simplify their lives?"
+        };
+            }
+
+            @for (var i = 1; i < questions.Length + 1; i++)
+    {
+        var colour = "";
+        if (i % 3 == 1)
+        {
+            colour = "orange";
+        }
+        else if (i % 3 == 2)
+        {
+            colour = "dark";
+        }
+        else if (i % 3 == 0)
+        {
+            colour = "light";
+        };
+
+        <div class="row my-3 @colour-label">
+            <div class="col-auto">
+                <table>
+                    <tr>
+                        <td class="align-middle text-center number-box">@i</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">
+                <label>@questions[i - 1]</label>
+            </div>
+            <div class="col-12 my-3">
+                <div class="form-group">
+                    <textarea id="@Html.Raw("RightFit" + i)" class="form-control"></textarea>
+                </div>
+            </div>
+
+        </div>
+}
+
+            <div class="alert-div"></div>
+
+            <div class="row my-5">
+                <div class="col-md-6 mb-3">
+                    <input class="form-control" type="text" placeholder="Name" id="Name" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input class="form-control" type="text" placeholder="Company Name" id="Company" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input class="form-control" type="text" placeholder="Email" id="Email" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input class="form-control" type="text" placeholder="Phone Number" id="Phone" />
+                </div>
+                @*<button id="RightFitBtn" class="btn btn-outline-primary my-4 mx-auto">SUBMIT</button>*@
+                <div class="col-12">
+                    <div class="d-flex align-items-center flex-column-reverse justify-content-sm-between flex-sm-row align-items-sm-start">
+                        <button id="RightFitBtn" class="btn btn-outline-primary mt-sm-0 mt-3 contact-form-btn">SEND</button>
+                        <div class="g-recaptcha" data-sitekey="6LdMe0UUAAAAAOJDjKqfevmfH1bdvFAIykbsOmUd"></div>
+                    </div>
+                    <div class="text-sm-right">
+                        <div id="Captcha"></div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
