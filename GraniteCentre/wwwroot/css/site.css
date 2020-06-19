@@ -326,3 +326,6 @@ b {
 
 .right-fit-analysis-content form textarea.form-control {
   height: 150px; }
+
+.clearfix {
+  clear: both; }
