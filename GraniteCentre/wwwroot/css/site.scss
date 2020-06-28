@@ -243,223 +243,231 @@ b {
     }
 }
 
-.contact-form {
-    @include media-breakpoint-down(xs) {
-        .contact-form-btn {
-            display: block;
-            width: 100%;
-        }
-    }
-}
-
-.contact-form-logo {
-    width: 100%;
-    max-height: 350px;
-}
-
-.Overlay-Small {
-    background-image: url("../images/Overlay-Small.png");
-    background-position: center;
-    background-size: cover;
-    height: 200px;
-
-    h1 {
-        padding-top: 50px;
-        font-weight: 300;
-    }
-}
-
 @include media-breakpoint-up(lg) {
-    .Overlay-Small {
-        height: 413px;
-
-        h1 {
-            padding-top: 250px;
-        }
+    .bg-light-blue {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 }
 
-.Retailer-Focus-Banner {
-    background-image: url("../images/Retailer-Focus-Banner.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.Greater-Moncton-Banner {
-    background-image: url("../images/Greater-Moncton-Banner.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.Contact-Banner {
-    background-image: url("../images/Contact-Banner.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.Leasing-Banner {
-    background-image: url("../images/Leasing-Banner.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.Site-Banner {
-    background-image: url("../images/Lay-of-the-Land-Banner.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.Right-Fit-Analysis-Banner {
-    background-image: url("../images/Right-Fit-Analysis-Banner.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.News-Banner {
-    background-image: url("../images/News-Banner.jpg");
-    background-position: center;
-    background-size: cover;
-
-    @include media-breakpoint-up(lg) {
-        h1 {
-            display: inline-block;
-            position: relative;
-            line-height: 200px;
-            font-size: 5em;
-            padding-top: 150px;
-
-            &:before {
-                content: "";
+    .contact-form {
+        @include media-breakpoint-down(xs) {
+            .contact-form-btn {
                 display: block;
-                position: absolute;
-                left: -200px;
-                height: 200px;
-                width: 200px;
-                background-repeat: no-repeat;
-                background-image: url("../images/GC-Arrow-Right.svg");
-                background-size: contain;
-                opacity: 0.5;
+                width: 100%;
             }
         }
     }
-}
 
-.News-Page {
-    .media {
-        img {
-            width: 250px;
-            max-width: 100%;
-        }
+    .contact-form-logo {
+        width: 100%;
+        max-height: 350px;
     }
 
-    @include media-breakpoint-down(sm) {
-        .media {
-            display:block;
-        }
-    }
-}
+    .Overlay-Small {
+        background-image: url("../images/Overlay-Small.png");
+        background-position: center;
+        background-size: cover;
+        height: 200px;
 
-.carousel-item:not(.carousel-video):after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: url("../images/Overlay-Large.png");
-    background-size: contain;
-}
-
-.retailer-focus-content {
-    max-width: 875px;
-
-    h3 {
-        font-weight: 400;
-    }
-}
-
-.the-right-fit {
-    @include media-breakpoint-up(md) {
-        .the-right-fit-img {
-            padding-top: 24px;
+        h1 {
+            padding-top: 50px;
+            font-weight: 300;
         }
     }
 
     @include media-breakpoint-up(lg) {
-        margin-bottom: 200px;
+        .Overlay-Small {
+            height: 413px;
 
+            h1 {
+                padding-top: 250px;
+            }
+        }
+    }
+
+    .Retailer-Focus-Banner {
+        background-image: url("../images/Retailer-Focus-Banner.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .Greater-Moncton-Banner {
+        background-image: url("../images/Greater-Moncton-Banner.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .Contact-Banner {
+        background-image: url("../images/Contact-Banner.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .Leasing-Banner {
+        background-image: url("../images/Leasing-Banner.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .Site-Banner {
+        background-image: url("../images/Lay-of-the-Land-Banner.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .Right-Fit-Analysis-Banner {
+        background-image: url("../images/Right-Fit-Analysis-Banner.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .News-Banner {
+        background-image: url("../images/News-Banner.jpg");
+        background-position: center;
+        background-size: cover;
+
+        @include media-breakpoint-up(lg) {
+            h1 {
+                display: inline-block;
+                position: relative;
+                line-height: 200px;
+                font-size: 5em;
+                padding-top: 150px;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: -200px;
+                    height: 200px;
+                    width: 200px;
+                    background-repeat: no-repeat;
+                    background-image: url("../images/GC-Arrow-Right.svg");
+                    background-size: contain;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .News-Page {
+        .media {
+            img {
+                width: 250px;
+                max-width: 100%;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            .media {
+                display: block;
+            }
+        }
+    }
+
+    .carousel-item:not(.carousel-video):after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("../images/Overlay-Large.png");
+        background-size: contain;
+    }
+
+    .retailer-focus-content {
+        max-width: 875px;
+
+        h3 {
+            font-weight: 400;
+        }
+    }
+
+    .the-right-fit {
+        @include media-breakpoint-up(md) {
+            .the-right-fit-img {
+                padding-top: 24px;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 200px;
+
+
+            .the-right-fit-img {
+                position: absolute;
+            }
+        }
 
         .the-right-fit-img {
-            position: absolute;
+            max-width: 90%;
         }
     }
 
-    .the-right-fit-img {
-        max-width: 90%;
+    .navbar-nav {
+        display: inline-flex;
     }
-}
 
-.navbar-nav {
-    display: inline-flex;
-}
+    .number-box {
+        width: 60px;
+        height: 60px;
+        font-family: 'schluberregular', sans-serif;
+        font-size: 3em;
+        line-height: normal;
+        padding-top: 10px;
+    }
 
-.number-box {
-    width: 60px;
-    height: 60px;
-    font-family: 'schluberregular', sans-serif;
-    font-size: 3em;
-    line-height: normal;
-    padding-top: 10px;
-}
+    .right-fit-analysis-content {
+        form {
+            .orange-label {
+                .number-box {
+                    background-color: #c35131;
+                    color: #86341d;
+                }
 
-.right-fit-analysis-content {
-    form {
-        .orange-label {
-            .number-box {
-                background-color: #c35131;
-                color: #86341d;
+                label {
+                    color: #c35131;
+                }
+            }
+
+            .dark-label {
+                .number-box {
+                    background-color: #303e48;
+                    color: #5a6771;
+                }
+
+                label {
+                    color: #303e48;
+                }
+            }
+
+            .light-label {
+                .number-box {
+                    background-color: #79828b;
+                    color: #5a6771;
+                }
+
+                label {
+                    color: #79828b;
+                }
             }
 
             label {
-                color: #c35131;
-            }
-        }
-
-        .dark-label {
-            .number-box {
-                background-color: #303e48;
-                color: #5a6771;
+                font-size: 2rem;
+                line-height: 1.9rem;
+                margin: 0;
             }
 
-            label {
-                color: #303e48;
+            textarea.form-control {
+                height: 150px;
             }
-        }
-
-        .light-label {
-            .number-box {
-                background-color: #79828b;
-                color: #5a6771;
-            }
-
-            label {
-                color: #79828b;
-            }
-        }
-
-        label {
-            font-size: 2rem;
-            line-height: 1.9rem;
-            margin: 0;
-        }
-
-        textarea.form-control {
-            height: 150px;
         }
     }
-}
 
-.clearfix {
-    clear: both;
-}
+    .clearfix {
+        clear: both;
+    }

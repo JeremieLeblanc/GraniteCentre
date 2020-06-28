@@ -173,6 +173,12 @@ b {
     height: 53px;
     float: right; }
 
+@media (min-width: 992px) {
+  .bg-light-blue {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; } }
+
 @media (max-width: 575.98px) {
   .contact-form .contact-form-btn {
     display: block;
